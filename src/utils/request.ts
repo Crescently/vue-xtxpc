@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const baseURL = ''
+export const baseURL = ''
 
-const instance = axios.create({
+export const instance = axios.create({
   baseURL,
   timeout: 100000
 })
@@ -10,7 +10,6 @@ const instance = axios.create({
 //请求拦截器
 instance.interceptors.request.use(
   (config) => {
-
     return config
   },
   (err) => Promise.reject(err)
@@ -25,10 +24,9 @@ instance.interceptors.response.use(
     return Promise.reject(res.data)
   },
   (err) => {
-
     return Promise.reject(err)
   }
 )
 
-export default instance
-export { baseURL }
+
+
