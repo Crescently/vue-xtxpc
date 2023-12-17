@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-export const baseURL = ''
+const baseURL = 'http://pcapi-xiaotuxian-front-devtest.itheima.net'
 
-export const instance = axios.create({
+const instance = axios.create({
   baseURL,
   timeout: 100000
 })
@@ -18,15 +18,12 @@ instance.interceptors.request.use(
 //响应拦截器
 instance.interceptors.response.use(
   (res) => {
-    if (res.data.code === 0) {
-      return res
-    }
-    return Promise.reject(res.data)
+    return res
   },
   (err) => {
+    console.log(err)
     return Promise.reject(err)
   }
 )
 
-
-
+export default instance
