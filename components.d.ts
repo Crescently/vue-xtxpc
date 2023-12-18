@@ -10,6 +10,7 @@ declare module 'vue' {
     ElButton: typeof import('element-plus/es')['ElButton']
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
     ElRow: typeof import('element-plus/es')['ElRow']
+    FixedHeader: typeof import('./src/components/FixedHeader.vue')['default']
     LayoutFooter: typeof import('./src/components/LayoutFooter.vue')['default']
     LayoutHeader: typeof import('./src/components/LayoutHeader.vue')['default']
     LayoutNav: typeof import('./src/components/LayoutNav.vue')['default']

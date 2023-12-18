@@ -16,6 +16,9 @@
       "element-plus/global"
     ],
     "paths": {
+      "@": [
+        "src"
+      ],
       "@/*": [
         "./src/*"
       ]
