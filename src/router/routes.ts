@@ -1,15 +1,24 @@
+import BasicLayout from '@/views/layout/BasicLayout.vue'
+import HomePage from '@/views/home/HomePage.vue'
+import CategoryPage from '@/views/category/CategoryPage.vue'
+
 export const routes = [
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   component: ''
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (About.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import('')
-  // }
+  {
+    path: '/',
+    component: BasicLayout,
+    children: [
+      {
+        path: '', //设置默认二级路由
+        component: HomePage
+      },
+      {
+        path: '/category',
+        component: CategoryPage
+      }
+    ]
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/login/LoginPage.vue')
+  }
 ]
