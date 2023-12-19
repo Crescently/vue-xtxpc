@@ -8,9 +8,17 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCarousel: typeof import('element-plus/es')['ElCarousel']
+    ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
     ElRow: typeof import('element-plus/es')['ElRow']
     FixedHeader: typeof import('./src/components/FixedHeader.vue')['default']
+    HomeBanner: typeof import('./src/components/HomeBanner.vue')['default']
+    HomeCategory: typeof import('./src/components/HomeCategory.vue')['default']
+    HomeHot: typeof import('./src/components/HomeHot.vue')['default']
+    HomeNew: typeof import('./src/components/HomeNew.vue')['default']
+    HomePanel: typeof import('./src/components/HomePanel.vue')['default']
+    HomeProduct: typeof import('./src/components/HomeProduct.vue')['default']
     LayoutFooter: typeof import('./src/components/LayoutFooter.vue')['default']
     LayoutHeader: typeof import('./src/components/LayoutHeader.vue')['default']
     LayoutNav: typeof import('./src/components/LayoutNav.vue')['default']

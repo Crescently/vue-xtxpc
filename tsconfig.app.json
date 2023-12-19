@@ -11,13 +11,13 @@
   "compilerOptions": {
     "composite": true,
     "noEmit": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "types": [
       "element-plus/global"
     ],
     "paths": {
       "@": [
-        "src"
+        "./src"
       ],
       "@/*": [
         "./src/*"
