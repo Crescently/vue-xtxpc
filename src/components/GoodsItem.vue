@@ -8,12 +8,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  goods: {
-    type: Object,
-    default: () => {}
-  }
-})
+defineProps<{ goods: goods }>()
 </script>
 
 <style scoped lang="scss">
