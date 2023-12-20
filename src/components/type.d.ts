@@ -20,3 +20,18 @@ declare interface hotlist {
   picture: string
   title: string
 }
+
+declare interface productlist {
+  id: string
+  name: string
+  picture: string
+  children: {
+    id: string
+    layer: number
+    name: string
+    parent: any
+  }[]
+  goods: goods[]
+  saleInfo: string
+}
+

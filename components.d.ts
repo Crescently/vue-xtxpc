@@ -13,6 +13,7 @@ declare module 'vue' {
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
     ElRow: typeof import('element-plus/es')['ElRow']
     FixedHeader: typeof import('./src/components/FixedHeader.vue')['default']
+    GoodsItem: typeof import('./src/components/GoodsItem.vue')['default']
     HomeBanner: typeof import('./src/components/HomeBanner.vue')['default']
     HomeCategory: typeof import('./src/components/HomeCategory.vue')['default']
     HomeHot: typeof import('./src/components/HomeHot.vue')['default']

@@ -11,3 +11,7 @@ export const getNewList = () => {
 export const getHotList = () => {
   return request.get('home/hot')
 }
+
+export const getProductList = () => {
+  return request.get('/home/goods')
+}
