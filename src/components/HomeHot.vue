@@ -16,7 +16,6 @@
 import HomePanel from '@/components/HomePanel.vue'
 import { onMounted, ref } from 'vue'
 import { getHotList } from '@/apis/home'
-import type { hotlist } from '@/type'
 
 const hotList = ref([] as hotlist[])
 const getHot = async () => {

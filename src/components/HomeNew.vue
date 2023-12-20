@@ -16,7 +16,6 @@
 import HomePanel from '@/components/HomePanel.vue'
 import { onMounted, ref } from 'vue'
 import { getNewList } from '@/apis/home'
-import type { newlist } from '@/type'
 
 const newList = ref([] as newlist[])
 const getNew = async () => {
