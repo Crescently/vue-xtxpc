@@ -1,7 +1,8 @@
 import request from '@/utils/request'
 
-export const getBannerList = () => {
-  return request.get('home/banner')
+export const getBannerList = (params = {} as any) => {
+  const { distributionSite = '1' } = params
+  return request.get('home/banner', { params: { distributionSite } })
 }
 
 export const getNewList = () => {

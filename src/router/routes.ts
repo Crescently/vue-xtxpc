@@ -12,7 +12,7 @@ export const routes = [
         component: HomePage
       },
       {
-        path: '/category',
+        path: '/category/:id',
         component: CategoryPage
       }
     ]
