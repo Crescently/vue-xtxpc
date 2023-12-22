@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import HomePanel from '@/components/HomePanel.vue'
+import HomePanel from '@/components/home/HomePanel.vue'
 import { onMounted, ref } from 'vue'
 import { getProductList } from '@/apis/home'
 import GoodsItem from '@/components/GoodsItem.vue'

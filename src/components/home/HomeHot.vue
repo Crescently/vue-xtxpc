@@ -1,11 +1,11 @@
 <template>
-  <HomePanel title="新鲜好物" sub-title="新鲜出炉 品质靠谱">
+  <HomePanel title="人气推荐" sub-title="人气爆款 不容错过">
     <ul class="goods-list">
-      <li v-for="item in newList" :key="item.id">
+      <li v-for="item in hotList" :key="item.id">
         <RouterLink to="/">
-          <img :src="item.picture" alt="" />
-          <p class="name">{{ item.name }}</p>
-          <p class="price">&yen;{{ item.price }}</p>
+          <img v-img-lazy="item.picture" alt="" src="" />
+          <p class="name">{{ item.title }}</p>
+          <p class="desc">{{ item.alt }}</p>
         </RouterLink>
       </li>
     </ul>
@@ -13,18 +13,18 @@
 </template>
 
 <script setup lang="ts">
-import HomePanel from '@/components/HomePanel.vue'
+import HomePanel from '@/components/home/HomePanel.vue'
 import { onMounted, ref } from 'vue'
-import { getNewList } from '@/apis/home'
+import { getHotList } from '@/apis/home'
 
-const newList = ref([] as newlist[])
-const getNew = async () => {
-  const res = await getNewList()
-  newList.value = res.data.result
+const hotList = ref([] as hotlist[])
+const getHot = async () => {
+  const res = await getHotList()
+  hotList.value = res.data.result
 }
 
 onMounted(() => {
-  getNew()
+  getHot()
 })
 </script>
 
@@ -32,13 +32,11 @@ onMounted(() => {
 .goods-list {
   display: flex;
   justify-content: space-between;
-  height: 406px;
+  height: 426px;
 
   li {
     width: 306px;
     height: 406px;
-
-    background: #f0f9f4;
     transition: all 0.5s;
 
     &:hover {
@@ -55,13 +53,11 @@ onMounted(() => {
       font-size: 22px;
       padding-top: 12px;
       text-align: center;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
     }
 
-    .price {
-      color: $priceColor;
+    .desc {
+      color: #999;
+      font-size: 18px;
     }
   }
 }

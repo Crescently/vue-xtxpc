@@ -1,6 +1,7 @@
 import BasicLayout from '@/views/layout/BasicLayout.vue'
 import HomePage from '@/views/home/HomePage.vue'
 import CategoryPage from '@/views/category/CategoryPage.vue'
+import SubCategory from '@/views/subcategory/SubCategory.vue'
 
 export const routes = [
   {
@@ -14,6 +15,10 @@ export const routes = [
       {
         path: '/category/:id',
         component: CategoryPage
+      },
+      {
+        path:'/category/sub/:id',
+        component: SubCategory
       }
     ]
   },
