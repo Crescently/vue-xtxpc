@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    DetailHot: typeof import('./src/components/detail/DetailHot.vue')['default']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
     ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -24,11 +25,13 @@ declare module 'vue' {
     HomeNew: typeof import('./src/components/home/HomeNew.vue')['default']
     HomePanel: typeof import('./src/components/home/HomePanel.vue')['default']
     HomeProduct: typeof import('./src/components/home/HomeProduct.vue')['default']
+    ImageView: typeof import('./src/components/imageView.vue')['default']
     LayoutFooter: typeof import('./src/components/layout/LayoutFooter.vue')['default']
     LayoutHeader: typeof import('./src/components/layout/LayoutHeader.vue')['default']
     LayoutNav: typeof import('./src/components/layout/LayoutNav.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    XtxSku: typeof import('./src/components/XtxSku/index.vue')['default']
   }
   export interface ComponentCustomProperties {
     vInfiniteScroll: typeof import('element-plus/es')['ElInfiniteScroll']

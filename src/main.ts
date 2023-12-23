@@ -5,10 +5,12 @@ import App from './App.vue'
 import router from './router'
 import '@/styles/common.scss'
 import plugin from '@/plugins'
+import componentPlugin from '@/components'
 
 const app = createApp(App)
 
 app.use(pinia)
 app.use(router)
 app.use(plugin)
+app.use(componentPlugin)
 app.mount('#app')
