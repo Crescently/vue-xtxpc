@@ -4,3 +4,8 @@ declare interface queryData {
   pageSize: number
   sortField: string
 }
+
+declare interface loginUser {
+  account: string
+  password: string
+}

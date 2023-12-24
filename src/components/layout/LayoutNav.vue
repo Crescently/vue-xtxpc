@@ -2,12 +2,19 @@
   <nav class="app-topnav">
     <div class="container">
       <ul>
-        <template v-if="true">
+        <template v-if="userStore.userInfo.token">
           <li>
-            <a href="javascript:"><i class="iconfont icon-user"></i>周杰伦</a>
+            <a href="javascript:"
+              ><i class="iconfont icon-user"></i>{{ userStore.userInfo.account }}</a
+            >
           </li>
           <li>
-            <el-popconfirm title="确认退出吗?" confirm-button-text="确认" cancel-button-text="取消">
+            <el-popconfirm
+              title="确认退出吗?"
+              @confirm="confirm"
+              confirm-button-text="确认"
+              cancel-button-text="取消"
+            >
               <template #reference>
                 <a href="javascript:">退出登录</a>
               </template>
@@ -17,7 +24,17 @@
           <li><a href="javascript:">会员中心</a></li>
         </template>
         <template v-else>
-          <li><a href="javascript:">请先登录</a></li>
+          <li>
+            <a
+              href="javascript:"
+              @click="
+                $router.push({
+                  path: '/login'
+                })
+              "
+              >请先登录</a
+            >
+          </li>
           <li><a href="javascript:">帮助中心</a></li>
           <li><a href="javascript:">关于我们</a></li>
         </template>
@@ -26,7 +43,21 @@
   </nav>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useUserStore } from '@/stores/user'
+import { useRouter } from 'vue-router'
+
+const userStore = useUserStore()
+const router = useRouter()
+const confirm = () => {
+  //清除本地和pinia中的用户信息
+  userStore.clearUserInfo()
+  //回到登录页
+  router.push({
+    path: '/login'
+  })
+}
+</script>
 
 <style scoped lang="scss">
 .app-topnav {

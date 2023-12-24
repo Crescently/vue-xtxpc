@@ -14,3 +14,17 @@ declare interface categoryList {
   children: categoryList[]
   goods: goods[]
 }
+
+declare interface userInfo {
+  account: string
+  avatar: string
+  birthday: string
+  cityCode: string
+  gender: string
+  id: string
+  mobile: string
+  nickname: string
+  profession: string
+  provinceCode: string
+  token: string
+}

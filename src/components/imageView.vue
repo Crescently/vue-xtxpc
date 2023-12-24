@@ -54,7 +54,7 @@ defineProps({
 })
 
 const activeIndex = ref(0)
-const enterHandler = (i) => {
+const enterHandler = (i: any) => {
   activeIndex.value = i
 }
 
