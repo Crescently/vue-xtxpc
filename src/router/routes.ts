@@ -1,33 +1,27 @@
-import BasicLayout from '@/views/layout/BasicLayout.vue'
-import HomePage from '@/views/home/HomePage.vue'
-import CategoryPage from '@/views/category/CategoryPage.vue'
-import SubCategory from '@/views/subcategory/SubCategory.vue'
-import DetailPage from '@/views/detail/DetailPage.vue'
-import ShoppingCart from '@/views/cart/ShoppingCart.vue'
-
 export const routes = [
   {
     path: '/',
-    component: BasicLayout,
+    component: () => import('@/views/layout/BasicLayout.vue'),
     children: [
       {
         path: '', //设置默认二级路由
-        component: HomePage
+        component: () => import('@/views/home/HomePage.vue')
       },
       {
         path: '/category/:id',
-        component: CategoryPage
+        component: () => import('@/views/category/CategoryPage.vue')
       },
       {
         path: '/category/sub/:id',
-        component: SubCategory
+        component: () => import('@/views/subcategory/SubCategory.vue')
       },
       {
         path: '/detail/:id',
-        component: DetailPage
-      },{
-        path:'/cartlist',
-        component: ShoppingCart
+        component: () => import('@/views/detail/DetailPage.vue')
+      },
+      {
+        path: '/cartlist',
+        component: () => import('@/views/cart/ShoppingCart.vue')
       }
     ]
   },

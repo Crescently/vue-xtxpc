@@ -10,7 +10,6 @@ export const useCartStore = defineStore(
     const userStore = useUserStore()
 
     //添加购物车
-
     const addCart = async (goods: cartType) => {
       const token = userStore.userInfo.token
       const { skuId, count } = goods
