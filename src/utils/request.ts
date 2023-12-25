@@ -10,11 +10,10 @@ const instance = axios.create({
   timeout: 100000
 })
 
-const userStore = useUserStore()
-const router = useRouter()
 //请求拦截器
 instance.interceptors.request.use(
   (config) => {
+    const userStore = useUserStore()
     const token = userStore.userInfo.token
     // 请求头携带token
     if (token) {
@@ -36,7 +35,9 @@ instance.interceptors.response.use(
     // token 401 报错处理
     // 清除本地数据 + 跳转到登录页
     if (err.response.status === 401) {
+      const userStore = useUserStore()
       userStore.clearUserInfo()
+      const router = useRouter()
       router.push({ path: '/login' })
     }
     return Promise.reject(err)

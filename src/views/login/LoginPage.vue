@@ -85,12 +85,6 @@ const rules = {
   ],
   agree: [
     {
-      /**
-       *
-       * @param rule
-       * @param val  当前的值
-       * @param callback 回调函数
-       */
       // @ts-ignore
       validator: (rule, val, callback) => (val ? callback() : new Error('请先同意协议'))
     }

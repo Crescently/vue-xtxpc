@@ -28,3 +28,14 @@ declare interface userInfo {
   provinceCode: string
   token: string
 }
+
+declare interface cartType {
+  id: string
+  name: string
+  picture: string
+  price: string
+  count: number
+  skuId: string
+  attrsText: string
+  selected: boolean
+}

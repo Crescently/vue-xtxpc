@@ -3,6 +3,7 @@ import HomePage from '@/views/home/HomePage.vue'
 import CategoryPage from '@/views/category/CategoryPage.vue'
 import SubCategory from '@/views/subcategory/SubCategory.vue'
 import DetailPage from '@/views/detail/DetailPage.vue'
+import ShoppingCart from '@/views/cart/ShoppingCart.vue'
 
 export const routes = [
   {
@@ -24,6 +25,9 @@ export const routes = [
       {
         path: '/detail/:id',
         component: DetailPage
+      },{
+        path:'/cartlist',
+        component: ShoppingCart
       }
     ]
   },
