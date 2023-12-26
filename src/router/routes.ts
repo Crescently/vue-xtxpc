@@ -1,27 +1,44 @@
+import BasicLayout from '@/views/layout/BasicLayout.vue'
+import homePage from '@/views/home/HomePage.vue'
+import categoryPage from '@/views/category/CategoryPage.vue'
+import SubCategory from '@/views/subcategory/SubCategory.vue'
+import DetailPage from '@/views/detail/DetailPage.vue'
+import shoppingCart from '@/views/cart/ShoppingCart.vue'
+import CheckoutPage from '@/views/checkout/CheckoutPage.vue'
+import PayPage from '@/views/pay/PayPage.vue'
+
 export const routes = [
   {
     path: '/',
-    component: () => import('@/views/layout/BasicLayout.vue'),
+    component: BasicLayout,
     children: [
       {
         path: '', //设置默认二级路由
-        component: () => import('@/views/home/HomePage.vue')
+        component: homePage
       },
       {
         path: '/category/:id',
-        component: () => import('@/views/category/CategoryPage.vue')
+        component: categoryPage
       },
       {
         path: '/category/sub/:id',
-        component: () => import('@/views/subcategory/SubCategory.vue')
+        component: SubCategory
       },
       {
         path: '/detail/:id',
-        component: () => import('@/views/detail/DetailPage.vue')
+        component: DetailPage
       },
       {
         path: '/cartlist',
-        component: () => import('@/views/cart/ShoppingCart.vue')
+        component: shoppingCart
+      },
+      {
+        path: '/checkout',
+        component: CheckoutPage
+      },
+      {
+        path: '/pay',
+        component: PayPage
       }
     ]
   },
