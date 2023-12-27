@@ -6,6 +6,7 @@ import DetailPage from '@/views/detail/DetailPage.vue'
 import shoppingCart from '@/views/cart/ShoppingCart.vue'
 import CheckoutPage from '@/views/checkout/CheckoutPage.vue'
 import PayPage from '@/views/pay/PayPage.vue'
+import PayCallback from '@/views/pay/PayCallback.vue'
 
 export const routes = [
   {
@@ -39,6 +40,10 @@ export const routes = [
       {
         path: '/pay',
         component: PayPage
+      },
+      {
+        path: '/paycallback', // 注意路径，必须是paycallback
+        component: PayCallback
       }
     ]
   },
