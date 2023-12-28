@@ -40,7 +40,7 @@
                 </ul>
               </div>
               <div class="column state">
-                <p>{{ formatPayState(order.orderState)}}</p>
+                <p>{{ formatPayState(order.orderState) }}</p>
                 <p v-if="order.orderState === 3">
                   <a href="javascript:" class="green">查看物流</a>
                 </p>

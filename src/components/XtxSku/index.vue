@@ -22,7 +22,7 @@
     </dl>
   </div>
 </template>
-<script >
+<script>
 import { watchEffect } from 'vue'
 import getPowerSet from './power-set'
 

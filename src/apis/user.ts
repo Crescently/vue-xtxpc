@@ -16,4 +16,3 @@ export const postUserLogin = ({ account, password }: loginUser) => {
 export const getUserLikeList = ({ limit = 4 }) => {
   return request.get('/goods/relevant', { params: { limit } })
 }
-
