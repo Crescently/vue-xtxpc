@@ -7,6 +7,9 @@ import shoppingCart from '@/views/cart/ShoppingCart.vue'
 import CheckoutPage from '@/views/checkout/CheckoutPage.vue'
 import PayPage from '@/views/pay/PayPage.vue'
 import PayCallback from '@/views/pay/PayCallback.vue'
+import PersonalPage from '@/views/member/PersonalPage.vue'
+import UserInfo from '@/components/member/UserInfo.vue'
+import UserOrder from '@/components/member/UserOrder.vue'
 
 export const routes = [
   {
@@ -18,32 +21,46 @@ export const routes = [
         component: homePage
       },
       {
-        path: '/category/:id',
+        path: 'category/:id',
         component: categoryPage
       },
       {
-        path: '/category/sub/:id',
+        path: 'category/sub/:id',
         component: SubCategory
       },
       {
-        path: '/detail/:id',
+        path: 'detail/:id',
         component: DetailPage
       },
       {
-        path: '/cartlist',
+        path: 'cartlist',
         component: shoppingCart
       },
       {
-        path: '/checkout',
+        path: 'checkout',
         component: CheckoutPage
       },
       {
-        path: '/pay',
+        path: 'pay',
         component: PayPage
       },
       {
-        path: '/paycallback', // 注意路径，必须是paycallback
+        path: 'paycallback',
         component: PayCallback
+      },
+      {
+        path: 'member',
+        component: PersonalPage,
+        children: [
+          {
+            path: '', //置空 默认显示
+            component: UserInfo
+          },
+          {
+            path: 'order',
+            component: UserOrder
+          }
+        ]
       }
     ]
   },

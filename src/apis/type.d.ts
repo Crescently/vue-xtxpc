@@ -9,3 +9,9 @@ declare interface loginUser {
   account: string
   password: string
 }
+
+declare interface PageState {
+  orderState: number
+  page: number
+  pageSize: number
+}

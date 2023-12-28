@@ -35,3 +35,33 @@ declare interface productlist {
   saleInfo: string
 }
 
+declare interface order {
+  countdown: number
+  createTime: string
+  id: string
+  orderState: number
+  payChannel: number
+  payLatestTime: string
+  payMoney: number
+  payType: number
+  postFee: number
+  skus: skus[]
+  totalMoney: number
+  totalNum: number
+}
+
+declare interface skus {
+  id: string
+  name: string
+  image: string
+  curPrice: number
+  quantity: number
+  realPay: number
+  attrsText: string
+  spuId: string
+  totalMoney: any
+  properties: {
+    propertyMainName: string
+    propertyValueName: string
+  }[]
+}

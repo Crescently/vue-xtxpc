@@ -27,13 +27,14 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { getOrderData } from '@/apis/pay'
 
 const route = useRoute()
 const orderInfo = ref({} as any)
 
 const getOrderInfo = async () => {
-  const res = await getOrderAPI(route.query.orderId)
-  orderInfo.value = res.result
+  const res = await getOrderData(route.query.orderId)
+  orderInfo.value = res.data.result
 }
 
 onMounted(() => getOrderInfo())

@@ -16,12 +16,9 @@ declare module 'vue' {
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElEmpty: typeof import('element-plus/es')['ElEmpty']
-    ElForm: typeof import('element-plus/es')['ElForm']
-    ElFormItem: typeof import('element-plus/es')['ElFormItem']
-    ElInput: typeof import('element-plus/es')['ElInput']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+    ElPagination: typeof import('element-plus/es')['ElPagination']
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
-    ElRow: typeof import('element-plus/es')['ElRow']
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     FixedHeader: typeof import('./src/components/FixedHeader.vue')['default']
@@ -39,6 +36,8 @@ declare module 'vue' {
     LayoutNav: typeof import('./src/components/layout/LayoutNav.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UserInfo: typeof import('./src/components/member/UserInfo.vue')['default']
+    UserOrder: typeof import('./src/components/member/UserOrder.vue')['default']
     XtxSku: typeof import('./src/components/XtxSku/index.vue')['default']
   }
   export interface ComponentCustomProperties {

@@ -9,8 +9,4 @@ import componentPlugin from '@/components'
 
 const app = createApp(App)
 
-app.use(pinia)
-app.use(router)
-app.use(plugin)
-app.use(componentPlugin)
-app.mount('#app')
+app.use(pinia).use(router).use(plugin).use(componentPlugin).mount('#app')
